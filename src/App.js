@@ -1,6 +1,22 @@
 import { useState } from 'react';
 import profilePicture from './images/image-jeremy.png';
 import Data from './data.json';
+import iconPlay from './images/icon-play.svg';
+import iconWork from './images/icon-work.svg';
+import iconStudy from './images/icon-study.svg';
+import iconExercise from './images/icon-exercise.svg';
+import iconSocial from './images/icon-social.svg';
+import iconSelfCare from './images/icon-self-care.svg';
+import iconOptions from './images/icon-ellipsis.svg';
+
+const icons = {
+  "Play": iconPlay,
+  "Work": iconWork,
+  "Study": iconStudy,
+  "Exercise": iconExercise,
+  "Social": iconSocial,
+  "Self Care": iconSelfCare
+}
 
 function App() {
   const [periodicity, setPeriodicity] = useState('daily');
@@ -30,10 +46,20 @@ function App() {
 
 function Card(props) {
   return (
-    <div className='card'>
-      <p>{props.title}</p>
-      <p>{props.current}</p>
-      <p>{props.previous}</p>
+    <div className={'card ' + props.title.toLowerCase().replace(/ /g,'-')}>
+      <div>
+        <img src={icons[props.title]} alt="Category icon" />
+      </div>
+      <div className='stats'>
+        <div className='title'>
+          <p>{props.title}</p>
+          <img src={iconOptions} alt={'Options for ' + props.title + ' category'} />
+        </div>
+        <div>
+          <p>{props.current}Hrs</p>
+          <p>Last week - {props.previous}hrs</p>
+        </div>
+      </div>
     </div>
   )
 }

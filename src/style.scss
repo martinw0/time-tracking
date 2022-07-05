@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 // Primary
 $blue: hsl(246, 80%, 60%);
-$light-red: hsl(15, 100%, 70%); // Work
+$light-red-work: hsl(15, 100%, 70%); // Work
 $soft-blue: hsl(195, 74%, 62%); // Play
-$light-red: hsl(348, 100%, 68%); // Study
+$light-red-study: hsl(348, 100%, 68%); // Study
 $lime-green: hsl(145, 58%, 55%); // Exercise
 $violet: hsl(264, 64%, 52%); // Social
 $soft-orange: hsl(43, 84%, 65%); // Self care
@@ -77,6 +77,32 @@ main {
 }
 .card {
     color: white;
+    .stats {
+        background-color: $dark-blue;
+        border-radius: 10px;
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.work {
+    background-color: $light-red-work;
+}
+.play {
+    background-color: $soft-blue;
+}
+.study {
+    background-color: $light-red-study;
+}
+.exercise {
+    background-color: $lime-green;
+}
+.social {
+    background-color: $violet;
+}
+.self-care {
+    background-color: $soft-orange;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

@@ -55,6 +55,38 @@ main {
 .card {
   color: white;
 }
+.card .stats {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 10px;
+}
+.card .stats div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work {
+  background-color: hsl(15deg, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195deg, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348deg, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145deg, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264deg, 64%, 52%);
+}
+
+.self-care {
+  background-color: hsl(43deg, 84%, 65%);
+}
 
 .attribution {
   font-size: 11px;
