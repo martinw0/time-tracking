@@ -50,7 +50,15 @@ Users should be able to:
 
 ### Useful resources
 
+- [Set classs with onClick](https://bobbyhadz.com/blog/react-add-remove-class-on-click)
+- [Fetch JSON with React](https://www.youtube.com/watch?v=aJgAwjP20RY)
+
 ## Author
 
 - Frontend Mentor - [@martinw0](https://www.frontendmentor.io/profile/martinw0)
 - Twitter - [@LeWalletM](https://www.twitter.com/LeWalletM)
+
+## Questions
+
+- Is it a good way to do the main part in App.js ?
+- What is the best way to include static content (main html) in React ?

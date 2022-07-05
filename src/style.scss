@@ -66,6 +66,12 @@ main {
         ul {
             color: $pale-blue;
             display: inline-flex;
+            li {
+                cursor: pointer;
+            }
+            .active {
+                color: white;
+            }
         }
     }
 }

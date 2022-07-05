@@ -45,6 +45,12 @@ main {
   color: hsl(236deg, 100%, 87%);
   display: inline-flex;
 }
+.informations .periodicity ul li {
+  cursor: pointer;
+}
+.informations .periodicity ul .active {
+  color: white;
+}
 
 .attribution {
   font-size: 11px;
