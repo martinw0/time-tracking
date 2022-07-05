@@ -21,11 +21,21 @@ function App() {
       </div>
       { Data && Data.map( stat => {
         return(
-          <p>{stat.title}</p>
+          <Card title={stat.title} current={stat.timeframes[periodicity].current} previous={stat.timeframes[periodicity].previous} />
         )
       })}
     </main>
   );
+}
+
+function Card(props) {
+  return (
+    <div className='card'>
+      <p>{props.title}</p>
+      <p>{props.current}</p>
+      <p>{props.previous}</p>
+    </div>
+  )
 }
 
 export default App;
