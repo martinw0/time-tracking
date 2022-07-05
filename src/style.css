@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(226deg, 43%, 10%);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.informations {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 10px;
+}
+.informations .user {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: hsl(235deg, 45%, 61%);
+  border-radius: 10px;
+}
+.informations .user img {
+  height: 60px;
+  border: solid white 3px;
+  border-radius: 50%;
+}
+.informations .user h1 {
+  margin-left: 15px;
+}
+.informations .periodicity ul {
+  color: hsl(236deg, 100%, 87%);
+  display: inline-flex;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

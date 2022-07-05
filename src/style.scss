@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+// Primary
+$blue: hsl(246, 80%, 60%);
+$light-red: hsl(15, 100%, 70%); // Work
+$soft-blue: hsl(195, 74%, 62%); // Play
+$light-red: hsl(348, 100%, 68%); // Study
+$lime-green: hsl(145, 58%, 55%); // Exercise
+$violet: hsl(264, 64%, 52%); // Social
+$soft-orange: hsl(43, 84%, 65%); // Self care
+// Neutral
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+$breakpoints: (
+    "phone-down": 500px,
+    "tablet-up": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px,
+    "widescreen-up": 1440px
+);
+@mixin media-min($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $very-dark-blue;
+}
+main {
+    flex-grow: 1;
+}
+.informations {
+    background-color: $dark-blue;
+    border-radius: 10px;
+    .user {
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: $desaturated-blue;
+        border-radius: 10px;
+        img {
+            height: 60px;
+            border: solid white 3px;
+            border-radius: 50%;
+        }
+        h1 {
+            margin-left: 15px;
+        }
+    }
+    .periodicity {
+        ul {
+            color: $pale-blue;
+            display: inline-flex;
+        }
+    }
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
