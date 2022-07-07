@@ -47,7 +47,7 @@ function App() {
 function Card(props) {
   return (
     <div className={'card ' + props.title.toLowerCase().replace(/ /g,'-')}>
-      <div>
+      <div className='header'>
         <img src={icons[props.title]} alt="Category icon" />
       </div>
       <div className='stats'>
@@ -55,7 +55,7 @@ function Card(props) {
           <p>{props.title}</p>
           <img src={iconOptions} alt={'Options for ' + props.title + ' category'} />
         </div>
-        <div>
+        <div className='hours'>
           <p>{props.current}Hrs</p>
           <p>Last week - {props.previous}hrs</p>
         </div>
