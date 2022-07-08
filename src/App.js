@@ -24,7 +24,7 @@ function App() {
     <main>
       <div className="informations">
         <div className="user">
-          <img src={profilePicture} />
+          <img src={profilePicture} alt='Profile'/>
           <h1>Report for<br /><span>Jeremy Robson</span></h1>
         </div>
         <div className="periodicity">
