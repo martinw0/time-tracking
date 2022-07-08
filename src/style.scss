@@ -43,18 +43,18 @@ body {
 }
 main {
     flex-grow: 1;
-    margin: 40px 10px;
+    margin: 80px 20px;
 }
 .informations {
     background-color: $dark-blue;
-    border-radius: 10px;
+    border-radius: 15px;
     .user {
         display: flex;
         align-items: center;
         color: white;
         background-color: $desaturated-blue;
-        border-radius: 10px;
-        padding: 20px 30px;
+        border-radius: 15px;
+        padding: 30px;
         img {
             height: 60px;
             border: solid white 3px;
@@ -64,8 +64,9 @@ main {
             margin-left: 30px;
             font-size: 1.5rem;
             font-weight: 300;
+            line-height: 2.7rem;
             span {
-                font-size: 2rem;
+                font-size: 2.2rem;
                 font-weight: 400;
             }
         }
@@ -78,7 +79,7 @@ main {
             justify-content: space-between;
             li {
                 cursor: pointer;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             .active {
                 color: white;
@@ -87,24 +88,24 @@ main {
     }
 }
 .card {
-    margin-top: 20px;
-    border-radius: 10px;
+    margin-top: 22px;
+    border-radius: 15px;
     color: white;
     .header {
-        height: 30px;
+        height: 40px;
         position: relative;
         overflow: hidden;
         margin: 0 20px;
         img {
             position: absolute;
-            top: 0;
+            top: -9px;
             right: 0;
-            height: 60px;
+            height: 85px;
         }
     }
     .stats {
         background-color: $dark-blue;
-        border-radius: 10px;
+        border-radius: 15px;
         padding: 20px 20px;
         div {
             display: flex;
@@ -113,7 +114,7 @@ main {
             padding: 7px 0;
         }
         .title {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 500;
             img {
                 height: 5px;
@@ -121,12 +122,13 @@ main {
         }
         .hours {
             p:nth-child(1) {
-                font-size: 2rem;
+                font-size: 2.7rem;
                 font-weight: 400;
             }
             p:nth-child(2) {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 font-weight: 300;
+                color: $pale-blue;
             }
         }
     }
