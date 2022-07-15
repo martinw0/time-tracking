@@ -40,6 +40,10 @@ body {
     display: flex;
     flex-direction: column;
     background-color: $very-dark-blue;
+    @include media-min("tablet-down") {
+        align-items: center;
+        justify-content: center;
+    }
 }
 main {
     flex-grow: 1;
@@ -50,6 +54,10 @@ main {
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 20px;
         grid-row-gap: 20px;
+        margin: 0 150px;
+    }
+    @include media-min("widescreen-up") {
+        margin: 0 20vw;
     }
 }
 .informations {
@@ -57,14 +65,24 @@ main {
     border-radius: 15px;
     @include media-min("tablet-down") {
         grid-area: 1 / 1 / 3 / 2;
+        display: flex;
+        flex-direction: column;
     }
     .user {
         display: flex;
         align-items: center;
         color: white;
-        background-color: $desaturated-blue;
+        background-color: $blue;
         border-radius: 15px;
         padding: 30px;
+        @include media-min("tablet-down") {
+            flex-direction: column;
+            align-items: flex-start;
+            flex-grow: 1;
+            img {
+                margin-bottom: 30px;
+            }
+        }
         img {
             height: 60px;
             border: solid white 3px;
@@ -78,6 +96,15 @@ main {
             span {
                 font-size: 2.2rem;
                 font-weight: 400;
+            }
+            @include media-min("tablet-down") {
+                margin: 0;
+                line-height: 3rem;
+                span {
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                    line-height: 4rem;
+                }
             }
         }
     }
@@ -93,6 +120,14 @@ main {
             }
             .active {
                 color: white;
+            }
+        }
+        @include media-min("tablet-down") {
+            ul {
+                flex-direction: column;
+                li {
+                    margin: 7px 0;
+                }
             }
         }
     }
@@ -131,6 +166,7 @@ main {
             font-weight: 500;
             img {
                 height: 5px;
+                cursor: pointer;
             }
         }
         .hours {
@@ -142,6 +178,20 @@ main {
                 font-size: 1.6rem;
                 font-weight: 300;
                 color: $pale-blue;
+            }
+        }
+        &:hover {
+            background-color: hsl(236, 42%, 30%);
+        }
+        @include media-min("tablet-down") {
+            .hours {
+                flex-direction: column;
+                align-items: flex-start;
+                p:nth-child(1) {
+                    font-size: 4.5rem;
+                    margin-bottom: 10px;
+                    font-weight: 300;
+                }
             }
         }
     }
